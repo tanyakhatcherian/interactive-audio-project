@@ -1,6 +1,6 @@
 let playlist = [
-	{src:'https://freesound.org/data/previews/531/531015_9818404-lq.mp3', track: 0, artist:"Songey"},  // 0
-	{src:'https://freesound.org/data/previews/264/264295_4019029-lq.mp3', track: 1, artist:"Songey"},  // 1
+	{src:'https://freesound.org/data/previews/264/264295_4019029-lq.mp3', track: 0, artist:"Songey"},  // 0
+	{src:'https://freesound.org/data/previews/531/531015_9818404-lq.mp3', track: 1, artist:"Songey"},  // 1
     {src:'https://freesound.org/data/previews/531/531947_7707368-lq.mp3', track: 2, artist:"Songey"}  // 2
 ]
 
@@ -23,11 +23,11 @@ let playASong = function(whichSong) {
     }
     
     if (i == 0) {
-        songTitle.textContent = `Ocean Waves`
-        document.body.style.background = "url('https://www.teahub.io/photos/full/277-2776366_wallpaper-beach-sand-waves-surf.jpg') no-repeat"
-    } else if (i == 1) {
         songTitle.textContent = `Dreams`
-        document.body.style.background = "url('https://images.unsplash.com/photo-1499346030926-9a72daac6c63?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1650&q=80')"
+        document.body.style.background = "url('https://images.unsplash.com/photo-1499346030926-9a72daac6c63?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1650&q=80') no-repeat"
+    } else if (i == 1) {
+        songTitle.textContent = `Ocean Wave`
+        document.body.style.background = "url('https://www.teahub.io/photos/full/277-2776366_wallpaper-beach-sand-waves-surf.jpg')"
     } else if (i == 2) {
         songTitle.textContent = `Rainfall`
         document.body.style.background = "url('https://i.pinimg.com/originals/71/a9/5d/71a95d3e30320ee8f62696a485e87aba.jpg')"
