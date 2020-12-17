@@ -19,7 +19,7 @@ let playASong = function(whichSong) {
 		audio.src = song.src // Change the song **
 		if (isPlaying) { audio.play() } 
 	} else {
-		audio = new Audio(song.src) 
+        audio = new Audio(song.src)
     }
     
     if (i == 0) {
