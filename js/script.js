@@ -1,12 +1,13 @@
 let playlist = [
-	{src:'https://freesound.org/data/previews/531/531015_9818404-lq.mp3', title:"Songggg", artist:"Songey"},  // 0
-	{src:'https://freesound.org/data/previews/264/264295_4019029-lq.mp3', title:"Final Day", artist:"Songey"},  // 1
-    {src:'https://freesound.org/data/previews/531/531947_7707368-lq.mp3', title:"Hello world", artist:"Songey"}  // 2
+	{src:'https://freesound.org/data/previews/531/531015_9818404-lq.mp3', track: 0, artist:"Songey"},  // 0
+	{src:'https://freesound.org/data/previews/264/264295_4019029-lq.mp3', track: 1, artist:"Songey"},  // 1
+    {src:'https://freesound.org/data/previews/531/531947_7707368-lq.mp3', track: 2, artist:"Songey"}  // 2
 ]
 
 //start off
 let artistName = document.querySelector(`#artist-name`)
 let songTitle = document.querySelector(`#song-title`)
+let trackCount = playlist.length
 let i = 0
 let isPlaying = false
 let audio = null // empty for now
@@ -59,8 +60,11 @@ play.addEventListener(`click`, playPause)
 
 //next song
 let pressedNext = function() {
-	i = i + 1
-    playASong(i)
+	if((i = i + 1) < trackCount){
+        playASong(i)
+    } else {
+        audio.pause();
+    }
 }
 
 let next = document.querySelector(`#next`)
@@ -68,8 +72,11 @@ next.addEventListener(`click`, pressedNext)
 
 //previous song
 let pressedPrev = function() {
-	i = i - 1
-    playASong(i)
+    if((i = i - 1) > -1){
+        playASong(i)
+    } else {
+        audio.pause();
+    }
 }
 
 let previous = document.querySelector(`#prev`)
