@@ -37,6 +37,7 @@ let playASong = function(whichSong) {
     //but i only have three songs so i tried doing i === 3 no song, but it doesn't work, 
     // i need to know how to fix the scenario of i being < 0 and > 2 and having the audio just 
     //stop which i could maybe do audio.load?
+    //and my other thing is how do i transition the background photos with like a fade-in?
 
 }
 
