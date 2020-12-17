@@ -23,13 +23,13 @@ let playASong = function(whichSong) {
     }
     
     if (i == 0) {
-        songTitle.textContent = `Dreams`
+        songTitle.textContent = `DREAMS`
         document.body.style.background = "url('https://images.unsplash.com/photo-1499346030926-9a72daac6c63?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1650&q=80') no-repeat"
     } else if (i == 1) {
-        songTitle.textContent = `Ocean Wave`
-        document.body.style.background = "url('https://www.teahub.io/photos/full/277-2776366_wallpaper-beach-sand-waves-surf.jpg')"
+        songTitle.textContent = `OCEAN WAVE`
+        document.body.style.background = "url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1653&q=80')"
     } else if (i == 2) {
-        songTitle.textContent = `Rainfall`
+        songTitle.textContent = `RAINFALL`
         document.body.style.background = "url('https://i.pinimg.com/originals/71/a9/5d/71a95d3e30320ee8f62696a485e87aba.jpg')"
     } else if (i < 2) {
         songTitle.textContent = `nosong`
