@@ -108,26 +108,5 @@ p {
     font-family: 'Roboto';
     font-size: 16px;
     }
-
-    html {
-        height: 100%;
-    }
-    body {
-        background-color: rgba(255,255,255,0);
-        background-image: url('https://images.unsplash.com/photo-1499346030926-9a72daac6c63?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1650&q=80');
-        background-blend-mode: screen;
-        transition: background-color 1s;
-        height: 100%;
-    }
-    .swap {
-        animation: swap 1000ms 1;
-    }
-    @keyframes swap {
-        0%, 100% {background-color: rgba(255,255,255,0);}
-        50% {background-color: rgba(255,255,255,1);}
-    }
     
 }
-
-/* i put my media queries here, instead of a new media.css because theres only 2, i hope thats ok
-i know it wasn't required for the submission so i only did 2 just so it doesn't look bad on mobile lol*/
