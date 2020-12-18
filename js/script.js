@@ -4,6 +4,7 @@ let playlist = [
     {src:'https://freesound.org/data/previews/531/531947_7707368-lq.mp3', track: 2, artist:"Songey"}  // 2
 ]
 
+
 //start off
 let artistName = document.querySelector(`#artist-name`)
 let songTitle = document.querySelector(`#song-title`)
@@ -31,9 +32,7 @@ let playASong = function(whichSong) {
     } else if (i == 2) {
         songTitle.textContent = `RAINFALL`
         document.body.style.background = "url('https://i.pinimg.com/originals/71/a9/5d/71a95d3e30320ee8f62696a485e87aba.jpg')"
-    } else if (i < 2) {
-        songTitle.textContent = `nosong`
-    }
+    } 
     // Rocco help me, because I know if you continue clicking next, i goes up by one, 
     //but i only have three songs so i tried doing i === 3 no song, but it doesn't work, 
     // i need to know how to fix the scenario of i being < 0 and > 2 and having the audio just 
@@ -60,7 +59,8 @@ play.addEventListener(`click`, playPause)
 
 //next song
 let pressedNext = function() {
-	if((i = i + 1) < trackCount){
+    if((i + 1) < trackCount){
+        i = i + 1
         playASong(i)
     } else {
         audio.pause();
@@ -72,10 +72,11 @@ next.addEventListener(`click`, pressedNext)
 
 //previous song
 let pressedPrev = function() {
-    if((i = i - 1) > -1){
+    if((i - 1) > -1){
+        i = i - 1
         playASong(i)
     } else {
-        audio.pause();
+        audio.pause()
     }
 }
 
