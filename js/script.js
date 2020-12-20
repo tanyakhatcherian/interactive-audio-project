@@ -8,6 +8,7 @@ let playlist = [
 //start off
 let artistName = document.querySelector(`#artist-name`)
 let songTitle = document.querySelector(`#song-title`)
+let introduction = document.querySelector(`#intro`)
 let trackCount = playlist.length
 let i = 0
 let isPlaying = false
@@ -28,6 +29,7 @@ let playASong = function(whichSong) {
     
     if (i == 0) {
         songTitle.textContent = playlist[i].song
+        introduction.textContent = `If you're feeling anxious, we've provided you with three calming audio tracks. Take a minute to sit back, breathe and relax.`
         document.body.classList.add(`swap`)
         setTimeout(()=>{ 
 	                document.body.style.backgroundImage = `url('https://images.unsplash.com/photo-1499346030926-9a72daac6c63?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1650&q=80')` 
@@ -35,6 +37,7 @@ let playASong = function(whichSong) {
         //document.body.style.background = "url('https://images.unsplash.com/photo-1499346030926-9a72daac6c63?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1650&q=80') no-repeat"
     } else if (i == 1) {
         songTitle.textContent = playlist[i].song
+        introduction.textContent = `Imagine yourself relaxing on a beach. Just the sun shining with no worries. A little getaway during these unprecedented times.`
         document.body.classList.add(`swap`)
         setTimeout(()=>{ 
 	                document.body.style.backgroundImage = `url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1653&q=80')` 
@@ -42,6 +45,7 @@ let playASong = function(whichSong) {
         //document.body.style.background = "url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1653&q=80')"
     } else if (i == 2) {
         songTitle.textContent = playlist[i].song
+        introduction.textContent = `Rainfall has a soothing, peaceful sound. We think it goes hand in hand with a cozy book or watching Netflix in bed.`
         document.body.classList.add(`swap`)
         setTimeout(()=>{ 
 	                document.body.style.backgroundImage = `url('https://i.pinimg.com/originals/71/a9/5d/71a95d3e30320ee8f62696a485e87aba.jpg')` 
@@ -109,5 +113,3 @@ previous.addEventListener(`click`, pressedPrev)
 //starts off at song[0]
 playASong(0)
 
-//just want to add credit here: https://codepen.io/roccop/professor/abmwqBe
-// also for ref. incase i need this pen again
